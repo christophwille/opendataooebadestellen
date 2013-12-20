@@ -17,8 +17,8 @@
             <Setter Property="CharacterSpacing" Value="-35"/>
         </Style>
 
-        <sys:String x:Key="GitHubUrl">https://github.com/christophwille/viennarealtime</sys:String>
-        <sys:String x:Key="PrivacyPolicyUrl">https://github.com/christophwille/viennarealtime/wiki/Privacy-Policy</sys:String>
+        <sys:String x:Key="GitHubUrl">https://github.com/christophwille/opendataooebadestellen/</sys:String>
+        <sys:String x:Key="PrivacyPolicyUrl">https://github.com/christophwille/opendataooebadestellen/wiki/Datenschutzerkl%C3%A4rung</sys:String>
 
         <local:LocalizedStrings x:Key="LocalizedStrings"/>
         <local:AppBootstrapper x:Key="Bootstrapper" />
