@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="EauxDeBaignade.HauteAutriche.Views.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="600" 
+    d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+            <ScrollViewer>
+                <StackPanel Margin="0,-12,0,24">
+                    <TextBlock Style="{StaticResource PhoneTextLargeStyle}"
+                        Text="Entwickler: Christoph Wille" />
+
+                    <HyperlinkButton
+                        NavigateUri="{Binding GitHubUrl}"
+                        TargetName="_new"
+                        HorizontalAlignment="Left"
+                        Content="Unterstützung und Quellcode" />
+
+                    <StackPanel Orientation="Horizontal" Margin="0,18,0,0">
+                        <TextBlock Style="{StaticResource PhoneTextNormalStyle}"
+                            Text="Version:" />
+                        <TextBlock Margin="0" Style="{StaticResource PhoneTextNormalStyle}"
+                            x:Name="VersionText" />
+                    </StackPanel>
+
+                <Button x:Name="Review" HorizontalAlignment="Left" Content="Bewerten Sie diese App"/>
+
+                    <RichTextBox>
+                        <Paragraph>
+                        Diese App nutzt Open Data des Landes Oberösterreich. Um mehr über 
+                        die Daten zu erfahren, besuchen Sie bitte die Site
+                    </Paragraph>
+                        <Paragraph>
+                        <Hyperlink TargetName="_new" NavigateUri="{Binding OoeBadestellenOgdUrl}">Badestellen Landesmessnetz</Hyperlink>
+                        </Paragraph>
+                        <Paragraph></Paragraph>
+                        <Paragraph>
+                        Diese App überträgt keine persönlich identifizierbaren Informationen.
+                    </Paragraph>
+                        <Paragraph></Paragraph>
+                    </RichTextBox>
+
+                    <HyperlinkButton
+                        NavigateUri="{Binding PrivacyPolicyUrl}"
+                        TargetName="_new"
+                        HorizontalAlignment="Left"
+                        Content="Datenschutzerklärung" />
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+    
+</UserControl>
