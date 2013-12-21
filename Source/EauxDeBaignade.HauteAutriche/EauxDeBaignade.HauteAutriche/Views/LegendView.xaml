@@ -1,15 +1,52 @@
-﻿<UserControl x:Class="EauxDeBaignade.HauteAutriche.Views.LegendView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    FontFamily="{StaticResource PhoneFontFamilyNormal}"
-    FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="480" d:DesignWidth="480">
-    
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+﻿<UserControl xmlns:Controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"  x:Class="EauxDeBaignade.HauteAutriche.Views.LegendView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:model="clr-namespace:EauxDeBaignade.HauteAutriche.Model"
+	mc:Ignorable="d"
+	d:DataContext="{Binding Source={d:DesignInstance Type=model:DesignTimeSampleData, IsDesignTimeCreatable=True}}"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"
+	d:DesignHeight="600" d:DesignWidth="480">
+	
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		
+		<TextBlock Grid.Row="0" 
+				   Style="{StaticResource PhoneTextExtraLargeStyle}"
+				   Text="Badewasserqualität" />
+		
+		<Controls:LongListSelector Grid.Row="1"  Margin="10,0,-12,0" ItemsSource="{Binding LegendItems}">
+			<Controls:LongListSelector.ItemTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
 
-    </Grid>
+						<Canvas VerticalAlignment="Center" Grid.Column="0" Background="Transparent" Width="30" Height="30">
+							<Ellipse
+								Fill="{Binding FillColorBrush}"
+								Height="30"
+								Width="30" />
+						</Canvas>
+
+						<StackPanel Grid.Column="1" Margin="10,0,0,17">
+							<TextBlock Text="{Binding Name}" 
+								   Style="{StaticResource PhoneTextLargeStyle}" />
+							<TextBlock Text="{Binding Beschreibung}" TextWrapping="Wrap"
+								   Style="{StaticResource PhoneTextNormalStyle}" />
+						</StackPanel>
+					</Grid>
+
+				</DataTemplate>
+			</Controls:LongListSelector.ItemTemplate>
+		</Controls:LongListSelector>
+	</Grid>
 </UserControl>

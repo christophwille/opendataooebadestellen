@@ -50,7 +50,7 @@
         
             <!--<phone:PanoramaItem x:Name="Favorites" Header="Favoriten" />-->
             <phone:PanoramaItem x:Name="All" Header="Alle" />
-            <!--<phone:PanoramaItem x:Name="Legend" Header="Legende" />-->
+            <phone:PanoramaItem x:Name="Legend" Header="Legende" />
             <phone:PanoramaItem x:Name="About" Header="Über" />
         </phone:Panorama>
     </Grid>

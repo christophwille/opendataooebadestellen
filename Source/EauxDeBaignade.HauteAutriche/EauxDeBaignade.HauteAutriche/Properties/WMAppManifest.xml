@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="de" />
   </Languages>
-  <App xmlns="" ProductID="{6656bfac-65d3-422e-bf7e-1e361ac77ec9}" Title="Badestellen Oberösterreich" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="EauxDeBaignade.HauteAutriche author" Description="Meßergebnisse der oberösterreichischen Badeseen (bakteriologisch, Temperatur, Sichttiefe, pH und Wetter). Die Meßwerte sind nicht tagesaktuell, es werden aber regelmäßig Proben genommen und ausgewertet (siehe weiterführende Informationen in Über der App)." Publisher="EauxDeBaignade.HauteAutriche" PublisherID="{099bb9a9-1b35-4949-8b1d-b4b553d724cb}">
+  <App xmlns="" ProductID="{6656bfac-65d3-422e-bf7e-1e361ac77ec9}" Title="Badestellen Oberösterreich" RuntimeType="Silverlight" Version="1.1.0.0" Genre="apps.normal" Author="EauxDeBaignade.HauteAutriche author" Description="Meßergebnisse der oberösterreichischen Badeseen (bakteriologisch, Temperatur, Sichttiefe, pH und Wetter). Die Meßwerte sind nicht tagesaktuell, es werden aber regelmäßig Proben genommen und ausgewertet (siehe weiterführende Informationen in Über der App)." Publisher="EauxDeBaignade.HauteAutriche" PublisherID="{099bb9a9-1b35-4949-8b1d-b4b553d724cb}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

@@ -39,10 +39,10 @@ namespace EauxDeBaignade.HauteAutriche.Views
 
         private void PanoramaMain_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            bool isNonUpdateableView =
-                ((PanoramaItem)(((Panorama)sender).SelectedItem)).Content is AboutView;
+            bool isUpdateableView =
+                ((PanoramaItem)(((Panorama)sender).SelectedItem)).Content is AllView;
 
-            ApplicationBar.IsVisible = !isNonUpdateableView;
+            ApplicationBar.IsVisible = isUpdateableView;
         }
 
         private async void MainPage_OnLoaded(object sender, RoutedEventArgs e)

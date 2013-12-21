@@ -11,6 +11,7 @@ namespace EauxDeBaignade.HauteAutriche.Model
     {
         public ObservableCollection<Badestelle> Badestellen { get; set; }
         public Badestelle Badestelle { get; set; }
+        public ObservableCollection<LegendItem> LegendItems { get; set; }
 
         public DesignTimeSampleData()
         {
@@ -18,7 +19,8 @@ namespace EauxDeBaignade.HauteAutriche.Model
             {
                 Name = "Wolfgangsee",
                 Datum = new DateTime(2013, 8, 1),
-                Wassertemperatur = "20,1"
+                Wassertemperatur = "20,1",
+                EColi = "90"
             };
 
             var bs = new List<Badestelle>()
@@ -27,6 +29,8 @@ namespace EauxDeBaignade.HauteAutriche.Model
             };
 
             Badestellen = new ObservableCollection<Badestelle>(bs);
+
+            LegendItems = new ObservableCollection<LegendItem>(LegendItem.GenerateLegendItems());
         }
     }
 }
